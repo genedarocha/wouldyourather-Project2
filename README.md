@@ -19,7 +19,7 @@ The application consists of several pages which are shown below.
   <img src="https://github.com/genedarocha/wouldyourather-Project2/blob/master/images/wur_select_a_question.png" height="250"/>
 
   4. [INPUT/INSERT A QUESTION] : This page shows and prompts a user to ask/input/enter/create a question 
-  <img src="https://github.com/genedarocha/wouldyourather-Project2/blob/master/images/wur_newquestion.png" height="250"/>
+  <img src=""https://github.com/genedarocha/wouldyourather-Project2/blob/master/images/wur_newquestion.png" height="250"/>
 
   5. [OUTPUT AND RESULTS ] : This page shows the results of what a user has selected. 
   <img src="https://github.com/genedarocha/wouldyourather-Project2/blob/master/images/wur_unanswered.png" height="250"/>
