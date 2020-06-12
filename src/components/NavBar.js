@@ -34,11 +34,11 @@ class NavBar extends PureComponent {
         />
         <Navbar bg="primary" variant="dark" light expand="md">
         <center><img className="logo" 
-                  src={`../images/wouldyourather.jpg`} alt="logo" height="250" width="250" /></center>
+                  src={`../../images/wouldyourather.jpg`} alt="logo" height="250" width="250" /></center>
         <center><img className="blank" 
-                  src={`../images/blank.jpg`} alt="blank" height="250" width="250" /></center>
+                  src={`../../images/blank.jpg`} alt="blank" height="250" width="250" /></center>
         <center><img className="blank" 
-                  src={`../images/blank.jpg`} alt="blank" height="250" width="100" /></center>
+                  src={`../../images/blank.jpg`} alt="blank" height="250" width="100" /></center>
           <NavbarBrand tag={Link} to="/"><b><center>          Would You Rather Game App</center></b></NavbarBrand>
           {authedUser &&
           <Fragment>
