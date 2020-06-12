@@ -26,7 +26,7 @@ The application consists of several pages which are shown below.
   <img src="https://github.com/genedarocha/wouldyourather-Project2/blob/master/public/images/wur_answered.png" height="250"/>
 
   6. [LEADERBOARD PAGE] : This page shows how all the users are on the a leaderboard.
-  <img src="https://github.com/genedarocha/wouldyourather-Project2/public/images/wur_leaderboard.png" height="250"/>
+  <img src="https://github.com/genedarocha/wouldyourather-Project2/blob/master/public/images/wur_leaderboard.png" height="250"/>
 
 ## Project Setup and Installation 
   
