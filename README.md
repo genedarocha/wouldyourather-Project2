@@ -13,7 +13,7 @@ The application consists of several pages which are shown below.
   <img src="https://github.com/genedarocha/wouldyourather-Project2/blob/master/images/wur_login.png" height="250"/>
 
   2. [DEFAULT HOME PAGE] : This is the main home page with tabs showing answered and unanswered questions By Default, the unanswered questions are first and user can move to each tab, by clicking each different tab.
-  <img src="https://github.com/genedarocha/wouldyourather-Project2//blob/master/images/wur_main_screen.png" height="250"/>   
+  <img src="https://github.com/genedarocha/wouldyourather-Project2/blob/master/images/wur_main_screen.png" height="250"/>   
    
   3. [LIST OF QUESTIONS PAGE] : The Question Page consists of a form. The user has to choose an option to answer the question.
   <img src="https://github.com/genedarocha/wouldyourather-Project2/blob/master/images/wur_select_a_question.png" height="250"/>
