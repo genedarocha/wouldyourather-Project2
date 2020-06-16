@@ -18,20 +18,22 @@ function Routes(props) {
   return <div className="container">
     <Switch>
       {
-        props.notLoggedIn ? <Route path='/' exact component={Login}/> :
+        props.isLoggedIn ? <Route path='/' exact component={Login}/> :
           <Fragment>
             <Route path='/' exact component={Dashboard} />
             <Route path='/leaderboard' exact component={LeaderBoard} />
             <Route path='/add' component={NewQuestion}/>
             <Route path="/questions/:id" component={QuestionDetails} />
             <Route exact path='/logout' component={Logout} />
+            <Route component={NotFound} /> 
           </Fragment>
       }
-      <Route component={NotFound} />
+      <Route path='/' exact component={Login}/>
     </Switch>
   </div>;
 }
 
-Routes.propTypes = {notLoggedIn: PropTypes.any};
+Routes.propTypes = {isLoggedIn: PropTypes.any};
+
 
 export default Routes;

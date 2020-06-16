@@ -18,14 +18,14 @@ class App extends Component {
     this.props.handletheInitialData()
   }
   render() {
-    const { notLoggedIn } = this.props;
+    const { isLoggedIn } = this.props;
 
     return (
       <Router>
         <Fragment>
           <div className="main-container">
             <NavBar/>
-            <Routes notLoggedIn={notLoggedIn}/>
+            <Routes isLoggedIn={isLoggedIn}/>
           </div>
         </Fragment>
       </Router>
@@ -35,12 +35,12 @@ class App extends Component {
 
 App.propTypes = {
   handletheInitialData : PropTypes.func.isRequired,
-  notLoggedIn: PropTypes.bool.isRequired
+  isLoggedIn: PropTypes.bool.isRequired
 };
 
 function mapStateToProps ({ authedUser }) {
   return {
-    notLoggedIn: authedUser === null
+    isLoggedIn: authedUser === null
   }
 }
 

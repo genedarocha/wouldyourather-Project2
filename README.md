@@ -52,3 +52,49 @@ Import LoadingProgress in your react component.
 import LoadingProgress from 'react-js-loading-progress-bar';
 
  # would-you-rather
+
+ Errors Found and Changes made after Submission 1
+
+ 1. ​ Error 1 
+function Routes(props) {
+  return <div className="container">
+    <Switch>
+      {
+        props.notLoggedIn ? <Route path='/' exact component={Login}/> :
+          <Fragment>
+            <Route path='/' exact component={Dashboard} />
+            <Route path='/leaderboard' exact component={LeaderBoard} />
+            <Route path='/add' component={NewQuestion}/>
+            <Route path="/questions/:id" component={QuestionDetails} />
+            <Route exact path='/logout' component={Logout} />
+          </Fragment>
+      }
+      <Route component={NotFound} />
+REQUIRED
+When a user is not logged in, they should be routed to the login page before determining if the page is a 404 or not. Please checkout this tutorial: tylermcginnis.com/react-router-protected-routes-authentication/
+
+Changed to 
+
+function Routes(props) {
+  return <div className="container">
+    <Switch>
+      {
+        props.notLoggedIn ? <Route path='/' exact component={Login}/> :
+          <Fragment>
+            <Route path='/' exact component={Dashboard} />
+            <Route path='/leaderboard' exact component={LeaderBoard} />
+            <Route path='/add' component={NewQuestion}/>
+            <Route path="/questions/:id" component={QuestionDetails} />
+            <Route exact path='/logout' component={Logout} />
+            <Route component={NotFound} />
+          </Fragment>
+      }
+    <Route path='/' exact component={Login}/>
+
+2. Changed from notlogged in variables to isloggedIn variables
+SUGGESTION
+when naming variables, its best to use positive names, such as isLoggedIn, and use the !isLoggedIn for "not"
+
+3. The code runs without errors. There are no warnings that resulted from not following the best practices listed in the documentation, such as using key for list items. All code is functional and formatted properly.
+
+to be evaluated in the next review
