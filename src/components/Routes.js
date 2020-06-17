@@ -28,7 +28,7 @@ function Routes(props) {
             <Route component={NotFound} /> 
           </Fragment>
       }
-      <Route path='/' exact component={Login}/>
+      <Route component={NotFound} /> 
     </Switch>
   </div>;
 }
@@ -37,3 +37,4 @@ Routes.propTypes = {isLoggedIn: PropTypes.any};
 
 
 export default Routes;
+

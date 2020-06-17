@@ -98,3 +98,17 @@ when naming variables, its best to use positive names, such as isLoggedIn, and u
 3. The code runs without errors. There are no warnings that resulted from not following the best practices listed in the documentation, such as using key for list items. All code is functional and formatted properly.
 
 to be evaluated in the next review
+
+
+Submission 2 -
+
+Error 1 - If a logged out user tries to access a page like http://localhost:3000/add this that only logged in users can see, you must redirect for the login page.
+
+Also, when the user tries to access a page that doesn't exist, the user must be redirected to a 404 (Not Found) Page.
+
+On both cases, I was redirected to the page below:
+-FIXED 
+
+Error 2 - The code runs without errors. There are no warnings that resulted from not following the best practices listed in the documentation, such as using key for list items. All code is functional and formatted properly.
+
+to be evaluated in the next review 
