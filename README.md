@@ -112,3 +112,18 @@ On both cases, I was redirected to the page below:
 Error 2 - The code runs without errors. There are no warnings that resulted from not following the best practices listed in the documentation, such as using key for list items. All code is functional and formatted properly.
 
 to be evaluated in the next review 
+
+Submission 3 - 
+
+Crazy I did not fix these bugs as I thought I did. :-(
+
+Made some changes
+1. Tested pages so no 404 error appears on all screens. See image below
+<img src="https://github.com/genedarocha/wouldyourather-Project2/blob/master/public/images/wur_no404.png" height="250"/>
+
+2. Test pages, if you put localhost:3000/add so that it points to error and a click takes you back to main page. 
+<img src="https://github.com/genedarocha/wouldyourather-Project2/blob/master/public/images/wur_404_badurl.png" height="250"/>
+
+3. Test pages, if you put localhost:3000/addxx so that it points to error and a click takes you back to main page. 
+<img src="https://github.com/genedarocha/wouldyourather-Project2/blob/master/public/images/wur_404_nohack.png" height="250"/>
+

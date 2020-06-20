@@ -25,7 +25,7 @@ function Routes(props) {
             <Route path='/add' component={NewQuestion}/>
             <Route path="/questions/:id" component={QuestionDetails} />
             <Route exact path='/logout' component={Logout} />
-            <Route component={NotFound} /> 
+
           </Fragment>
       }
       <Route component={NotFound} /> 
