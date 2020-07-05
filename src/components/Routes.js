@@ -5,7 +5,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { Switch, Route } from "react-router-dom";
-
 import Dashboard from './Dashboard'
 import LeaderBoard from './LeaderBoard'
 import Login from "./Login";
