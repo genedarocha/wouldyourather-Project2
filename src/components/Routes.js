@@ -13,18 +13,27 @@ import NewQuestion from "./NewQuestion";
 import QuestionDetails from "./QuestionDetails"
 import NotFound from "./NotFound"
 import Logout from './Logout'
+import connectRoute from './connectRoute'
+
+
+const LoginWrapper = connectRoute(Login);
+const DashboardWrapper = connectRoute(Dashboard);
+const LeaderboardWrapper  = connectRoute(LeaderBoard);
+const NewQuestionWrapper = connectRoute(NewQuestion);
+const QuestionDetailsWrapper = connectRoute(QuestionDetails);
+const LogoutWrapper = connectRoute(Logout);
 
 function Routes(props) {
   return <div className="container">
     <Switch>
       {
-        props.isLoggedIn ? <Route path='/' exact component={Login}/> :
+        props.isLoggedIn ? <Route path='/' exact component={LoginWrapper}/> :
           <Fragment>
-            <Route path='/' exact component={Dashboard} />
-            <Route path='/leaderboard' exact component={LeaderBoard} />
-            <Route path='/add' component={NewQuestion}/>
-            <Route path="/questions/:id" component={QuestionDetails} />
-            <Route exact path='/logout' component={Logout} />
+            <Route path='/' exact component={DashboardWrapper} />
+            <Route path='/leaderboard' exact component={LeaderboardWrapper} />
+            <Route path='/add' component={NewQuestionWrapper}/>
+            <Route path="/questions/:id" component={QuestionDetailsWrapper} />
+            <Route exact path='/logout' component={LogoutWrapper} />
 
           </Fragment>
       }

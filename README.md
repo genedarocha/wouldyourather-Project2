@@ -127,3 +127,17 @@ Made some changes
 3. Test pages, if you put localhost:3000/addxx so that it points to error and a click takes you back to main page. 
 <img src="https://github.com/genedarocha/wouldyourather-Project2/blob/master/public/images/wur_404_nohack.png" height="250"/>
 
+There is a warning message that shows up in the console right after logging in and landing on the dashboard. This probably is due to conditional rendering of routes. 
+
+4. Fixed the routing so that there no warning from a controlled to a unctrolled prop and associated errors
+
+5. Created xport default function connectRoute(WrappedComponent) { under file connectRoute.js and following constants 
+const LoginWrapper = connectRoute(Login);
+const DashboardWrapper = connectRoute(Dashboard);
+const LeaderboardWrapper  = connectRoute(LeaderBoard);
+const NewQuestionWrapper = connectRoute(NewQuestion);
+const QuestionDetailsWrapper = connectRoute(QuestionDetails);
+const LogoutWrapper = connectRoute(Logout);
+
+Used -             <Route path='/' exact component={DashboardWrapper} /> as part of the calling, but still get the errors on login and logging out - index.js:1 Warning: <Route> elements should not change from uncontrolled to controlled (or vice versa). You initially used no "location" prop and then provided one on a subsequent render.
+
