@@ -1,46 +1,45 @@
-   /*     File Name   : app.js
+/*     File Name   : app.js
           Date        : 31st May 2020
           Description : This is the central component app.js which uses functions like mapStateToProps and App.propTypes
     
-  */
+ */
 
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom'
 
-import { handletheInitialData }  from '../actions/shared'
+import { handletheInitialData } from '../actions/shared'
 import Routes from './Routes'
-import NavBar from './NavBar';
+import NavBar from './NavBar'
 
 class App extends Component {
-  componentDidMount(){
+  componentDidMount() {
     this.props.handletheInitialData()
+    
   }
   render() {
-    const { isLoggedIn } = this.props;
+    const { isLoggedIn } = this.props
 
     return (
       <Router>
-        <Fragment>
-          <div className="main-container">
-            <NavBar/>
-            <Routes isLoggedIn={isLoggedIn}/>
-          </div>
-        </Fragment>
+        <div className="main-container">
+          <NavBar />
+          <Routes isLoggedIn={isLoggedIn} />
+        </div>
       </Router>
-    );
+    )
   }
 }
 
 App.propTypes = {
-  handletheInitialData : PropTypes.func.isRequired,
-  isLoggedIn: PropTypes.bool.isRequired
-};
+  handletheInitialData: PropTypes.func.isRequired,
+  isLoggedIn: PropTypes.bool.isRequired,
+}
 
-function mapStateToProps ({ authedUser }) {
+function mapStateToProps({ authedUser }) {
   return {
-    isLoggedIn: authedUser === null
+    isLoggedIn: authedUser !== null,
   }
 }
 
@@ -48,9 +47,8 @@ function mapDispatchToProps(dispatch) {
   return {
     handletheInitialData: () => {
       dispatch(handletheInitialData())
-    }
+    },
   }
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
