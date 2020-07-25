@@ -16,6 +16,10 @@ import connectRoute from './connectRoute'
 import WithUser from './WithUser'
 
 
+// To have access to React Router match props, you need to pass in the props here. Something like this:
+// <Route path="/questions/:id" component={({match}) => ( <WithUser isLoggedIn={isLoggedIn}> <QuestionDetailsWrapper match={match} /> </WithUser> )} />
+
+
 const LoginWrapper = connectRoute(Login)
 const DashboardWrapper = connectRoute(Dashboard)
 const LeaderboardWrapper = connectRoute(LeaderBoard)
@@ -37,30 +41,32 @@ function Routes({ isLoggedIn }) {
           )}
         />
         <Route
-                  path="/leaderboard/:id" 
-                  exact component={() => (
+        
+                  path="/leaderboard" 
+                  component={({match}) => ( 
                   <WithUser isLoggedIn={isLoggedIn}>
                       <LeaderboardWrapper />
                   </WithUser>
           )}
         />
         <Route
-                  path="/add/:id" 
-                  component={() => (
-                  <WithUser isLoggedIn={isLoggedIn}>
-                    <NewQuestionWrapper />
+                  path="/add/:id/" 
+                  component={({match}) => ( 
+                  <WithUser isLoggedIn={isLoggedIn}> 
+                    <NewQuestionWrapper   />
                   </WithUser>
         )}
         />
-        <Route
-          path="/questions/:id" 
-                  component={() => (
-                  <WithUser isLoggedIn={isLoggedIn}>
-                    <QuestionDetailsWrapper />
-                  </WithUser>
-          )}
+        <Route    path="/questions/:id" 
+                  component={({match}) => ( 
+                  <WithUser isLoggedIn={isLoggedIn}> 
+                     <QuestionDetailsWrapper match={match} /> 
+                  </WithUser> 
+        
+        )}
         />
-        <Route exact path="/logout/:id" 
+
+        <Route exact path="/logout" 
                   component={LogoutWrapper} />
         <Route component={NotFound} />
       </Switch>

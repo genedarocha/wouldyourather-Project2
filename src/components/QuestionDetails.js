@@ -106,7 +106,7 @@
  function mapStateToProps ({ questions, users, authedUser }, { match}) {
    const answers = users[authedUser].answers;
    let answer, percOne, percTwo, total;
-   const { id } = match.params.id;
+   const { id } = match.params;
    const question = questions[id];
 
  if (answers.hasOwnProperty(question.id)) {
@@ -129,7 +129,7 @@
 
 
  function mapDispatchToProps(dispatch, props) {
-   const { id } = props.match.params.id;
+  const { id } = props.match.params.id;
  
    return {
      saveQuestionAnswer: (answer) => {

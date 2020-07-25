@@ -44,4 +44,4 @@ function mapStateToProps (state, { id }) {
   }
 }
 
-export default withRouter(connect(mapStateToProps, 0)(Question))
+export default withRouter(connect(mapStateToProps, null)(Question))

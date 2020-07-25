@@ -141,3 +141,8 @@ const LogoutWrapper = connectRoute(Logout);
 
 Used -             <Route path='/' exact component={DashboardWrapper} /> as part of the calling, but still get the errors on login and logging out - index.js:1 Warning: <Route> elements should not change from uncontrolled to controlled (or vice versa). You initially used no "location" prop and then provided one on a subsequent render.
 
+6. Made change to - const { id } = match.params.id; 
+7. Made Change - To have access to React Router match props, passed in the props here. Something like this:
+<Route path="/questions/:id" component={({match}) => ( <WithUser isLoggedIn={isLoggedIn}> <QuestionDetailsWrapper match={match} /> </Wit......
+
+
