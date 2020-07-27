@@ -53,7 +53,7 @@ function Routes({ isLoggedIn }) {
                   path="/add/:id/" 
                   component={({match}) => ( 
                   <WithUser isLoggedIn={isLoggedIn}> 
-                    <NewQuestionWrapper   />
+                    <NewQuestionWrapper  match={match} />
                   </WithUser>
         )}
         />

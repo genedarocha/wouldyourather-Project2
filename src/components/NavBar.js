@@ -49,7 +49,7 @@ class NavBar extends PureComponent {
                   <User id={authedUser}/>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} to="/add">New Question</NavLink>
+                  <NavLink tag={Link} to="/add/:id/">New Question</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink tag={Link} to="/leaderboard">LeaderBoard</NavLink>

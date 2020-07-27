@@ -128,8 +128,9 @@
  
 
 
- function mapDispatchToProps(dispatch, props) {
-  const { id } = props.match.params.id;
+ function mapDispatchToProps(dispatch, {match}) {
+//  const { id } = props.match.params.id;
+    const { id } = match.params;
  
    return {
      saveQuestionAnswer: (answer) => {

@@ -144,5 +144,10 @@ Used -             <Route path='/' exact component={DashboardWrapper} /> as part
 6. Made change to - const { id } = match.params.id; 
 7. Made Change - To have access to React Router match props, passed in the props here. Something like this:
 <Route path="/questions/:id" component={({match}) => ( <WithUser isLoggedIn={isLoggedIn}> <QuestionDetailsWrapper match={match} /> </Wit......
+8. Had a new problem when you came to vote, which would cause another problem. Fixed the issue, by passing in {match} and then using id to from match not props.id.. Fixed
+
+ function mapDispatchToProps(dispatch, {match}) {
+//  const { id } = props.match.params.id;
+    const { id } = match.params;
 
 
